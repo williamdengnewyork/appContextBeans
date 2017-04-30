@@ -50,7 +50,7 @@ public class ApplicationContextBeanList implements ApplicationContextAware {
 
     private void dumpApplicationContext(ApplicationContext context) {
         // Read context id isn't available. https://jira.springsource.org/browse/SPR-8816
-        String appContextInfo = String.format("ApplicationContext %s : %s", context.getId(), context.getClass()
+        String appContextInfo = String.format("ApplicationContext Context ID = %s : Context Name = %s", context.getId(), context.getClass()
                 .getName());
         ApplicationContext parent = context.getParent();
         if (parent != null) {

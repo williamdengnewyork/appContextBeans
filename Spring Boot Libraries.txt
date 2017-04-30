@@ -1,0 +1,919 @@
+>> Spring Boot Libraries
+
+-- Diff b/w spring-boot-starter-* (POM) artifact vs spring-boot-*  no-started artifacts
+
+  **: spring-boot-starter-*, including spring-boot-starter-parent, are JUST dependency POM config. There are NO compiled classes, 
+
+  ** They bring in spring-boot-* and spring-Spring-*(core,context,aop,beans,expression,test) --  (non-starter library with compiled classes)
+
+"Starter POMs" are a set of convenient dependency descriptors that you can include in your application. 
+You get a one-stop-shop for all the Spring and related technology that you need, without having to copy paste loads of dependency descriptors. 
+For example, if you want to get started using Spring and JPA for database access, just include the spring-boot-starter-data-jpa dependency in your project
+Top level Spring boot starter parent: 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.4.4.RELEASE</version>
+    </parent>
+
+
+
+-- Diff b/w spring app vs spring boot app
+  **: spring-boot-starter-* (1.4.4) automatically bring in dependency of spring-boot-*(1.4.4) AND Spring-*4.3.6 (core,context,aop,beans,expression,test)
+
+  > Spring App basic pom.xml
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>4.3.7.RELEASE</version>
+		</dependency>
+
+
+  > Spring Boot basic pom.xml
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.4.4.RELEASE</version>
+    </parent>
+
+
+
+-- List of 170  --    https://mvnrepository.com/artifact/org.springframework.boot
+
+
+
+1. Spring Boot Test Starter
+org.springframework.boot » spring-boot-starter-test
+Starter for testing Spring Boot applications with libraries including JUnit, Hamcrest and Mockito
+Last Release on Apr 22, 2017
+
+2. Spring Boot Web Starter
+org.springframework.boot » spring-boot-starter-web
+Starter for building web, including RESTful, applications using Spring MVC. Uses Tomcat as the default embedded container
+Last Release on Apr 22, 2017
+
+3. Spring Boot Starter
+org.springframework.boot » spring-boot-starter
+Core starter, including auto-configuration support, logging and YAML
+Last Release on Apr 22, 2017
+
+4. Spring Boot AutoConfigure525
+org.springframework.boot » spring-boot-autoconfigure
+Spring Boot AutoConfigure
+Last Release on Apr 22, 2017
+
+5. Spring Boot Actuator Starter
+org.springframework.boot » spring-boot-starter-actuator
+Starter for using Spring Boot's Actuator which provides production ready features to help you monitor and manage your application
+Last Release on Apr 22, 2017
+
+6. Spring Boot Configuration Processor
+org.springframework.boot » spring-boot-configuration-processor
+Spring Boot Configuration Processor
+Last Release on Apr 22, 2017
+
+7. Spring Boot
+org.springframework.boot » spring-boot
+Spring Boot
+Last Release on Apr 22, 2017
+
+8. Spring Boot Actuator
+org.springframework.boot » spring-boot-actuator
+Spring Boot Actuator
+Last Release on Apr 22, 2017
+
+9. Spring Boot Security Starter241
+org.springframework.boot » spring-boot-starter-security
+Starter for using Spring Security
+Last Release on Apr 22, 2017
+
+
+10. Spring Boot Developer Tools209
+org.springframework.boot » spring-boot-devtools
+Spring Boot Developer Tools
+Last Release on Apr 22, 2017
+
+11. Spring Boot WebSocket Starter199
+org.springframework.boot » spring-boot-starter-websocket
+Starter for building WebSocket applications using Spring Framework's WebSocket support
+Last Release on Apr 22, 2017
+
+12. Spring Boot Mail Starter189
+org.springframework.boot » spring-boot-starter-mail
+Starter for using Java Mail and Spring Framework's email sending support
+Last Release on Apr 22, 2017
+
+13. Spring Boot Data JPA Starter146
+org.springframework.boot » spring-boot-starter-data-jpa
+Starter for using Spring Data JPA with Hibernate
+Last Release on Apr 22, 2017
+
+14. Spring Boot Logging Starter126
+org.springframework.boot » spring-boot-starter-logging
+Starter for logging using Logback. Default logging starter
+Last Release on Apr 22, 2017
+
+15. Spring Boot Tomcat Starter88
+org.springframework.boot » spring-boot-starter-tomcat
+Starter for using Tomcat as the embedded servlet container. Default servlet container starter used by spring-boot-starter-web
+Last Release on Apr 22, 2017
+
+16. Spring Boot Thymeleaf Starter85
+org.springframework.boot » spring-boot-starter-thymeleaf
+Starter for building MVC web applications using Thymeleaf views
+Last Release on Apr 22, 2017
+
+17. Spring Boot JDBC Starter83
+org.springframework.boot » spring-boot-starter-jdbc
+Starter for using JDBC with the Tomcat JDBC connection pool
+Last Release on Apr 22, 2017
+
+18. Spring Boot AOP Starter59
+org.springframework.boot » spring-boot-starter-aop
+Starter for aspect-oriented programming with Spring AOP and AspectJ
+Last Release on Apr 22, 2017
+
+19. Spring Boot Test57
+org.springframework.boot » spring-boot-test
+Spring Boot Test
+Last Release on Apr 22, 2017
+
+20. Spring Boot Jetty Starter55
+org.springframework.boot » spring-boot-starter-jetty
+Starter for using Jetty as the embedded servlet container. An alternative to spring-boot-starter-tomcat
+Last Release on Apr 22, 2017
+
+
+21. Spring Boot Data MongoDB Starter46
+org.springframework.boot » spring-boot-starter-data-mongodb
+Starter for using MongoDB document-oriented database and Spring Data MongoDB
+Last Release on Apr 22, 2017
+
+22. Spring Boot Starter Redis (DEPRECATED)35
+org.springframework.boot » spring-boot-starter-redis
+Starter for using Redis key-value data store with Spring Data Redis and the Jedis client. Deprecated as of 1.4 in favor of spring-boot-starter-data-redis
+Last Release on Apr 21, 2017
+
+23. Spring Boot Validation Starter32
+org.springframework.boot » spring-boot-starter-validation
+Starter for using Java Bean Validation with Hibernate Validator
+Last Release on Apr 22, 2017
+
+24. Spring Boot Undertow Starter32
+org.springframework.boot » spring-boot-starter-undertow
+Starter for using Undertow as the embedded servlet container. An alternative to spring-boot-starter-tomcat
+Last Release on Apr 22, 2017
+
+25. Spring Boot Loader Tools31
+org.springframework.boot » spring-boot-loader-tools
+Spring Boot Loader Tools
+Last Release on Apr 22, 2017
+
+26. Spring Boot Log4J Starter30
+org.springframework.boot » spring-boot-starter-log4j
+Spring Boot Log4J Starter
+Last Release on Sep 20, 2016
+
+27. Spring Boot Integration Starter29
+org.springframework.boot » spring-boot-starter-integration
+Starter for using Spring Integration
+Last Release on Apr 22, 2017
+
+28. Spring Boot Log4j 2 Starter23
+org.springframework.boot » spring-boot-starter-log4j2
+Starter for using Log4j2 for logging. An alternative to spring-boot-starter-logging
+Last Release on Apr 22, 2017
+
+29. Spring Boot AMQP Starter22
+org.springframework.boot » spring-boot-starter-amqp
+Starter for using Spring AMQP and Rabbit MQ
+Last Release on Apr 22, 2017
+
+
+
+30. Spring Boot Data REST Starter22
+org.springframework.boot » spring-boot-starter-data-rest
+Starter for exposing Spring Data repositories over REST using Spring Data REST
+Last Release on Apr 22, 2017
+
+31. Spring Boot Jersey Starter22
+org.springframework.boot » spring-boot-starter-jersey
+Starter for building RESTful web applications using JAX-RS and Jersey. An alternative to spring-boot-starter-web
+Last Release on Apr 22, 2017
+
+32. Spring Boot Data Redis Starter22
+org.springframework.boot » spring-boot-starter-data-redis
+Starter for using Redis key-value data store with Spring Data Redis and the Jedis client
+Last Release on Apr 22, 2017
+
+33. Spring Boot Loader22
+org.springframework.boot » spring-boot-loader
+Spring Boot Loader
+Last Release on Apr 22, 2017
+
+34. Spring Boot FreeMarker Starter19
+org.springframework.boot » spring-boot-starter-freemarker
+Starter for building MVC web applications using FreeMarker views
+Last Release on Apr 22, 2017
+
+35. Spring Boot HATEOAS Starter19
+org.springframework.boot » spring-boot-starter-hateoas
+Starter for building hypermedia-based RESTful web application with Spring MVC and Spring HATEOAS
+Last Release on Apr 22, 2017
+
+36. Spring Boot Starter Remote Shell (DEPRECATED)18
+org.springframework.boot » spring-boot-starter-remote-shell
+Starter for using the CRaSH remote shell to monitor and manage your application over SSH. Deprecated since 1.5
+Last Release on Apr 22, 2017
+
+37. Spring Boot Batch Starter16
+org.springframework.boot » spring-boot-starter-batch
+Starter for using Spring Batch
+Last Release on Apr 22, 2017
+
+38. Spring Boot Test Auto Configure15
+org.springframework.boot » spring-boot-test-autoconfigure
+Spring Boot Test Auto-Configure
+Last Release on Apr 22, 2017
+
+39. Spring Boot CLI13
+org.springframework.boot » spring-boot-cli
+Spring Boot CLI
+Last Release on Apr 22, 2017
+
+40. Spring Boot Cache Starter10
+org.springframework.boot » spring-boot-starter-cache
+Starter for using Spring Framework's caching support
+Last Release on Apr 22, 2017
+
+41. Spring Boot Spring Cloud Connectors Starter9
+org.springframework.boot » spring-boot-starter-cloud-connectors
+Starter for using Spring Cloud Connectors which simplifies connecting to services in cloud platforms like Cloud Foundry and Heroku
+Last Release on Apr 22, 2017
+
+42. Spring Boot Dependency Tools7
+org.springframework.boot » spring-boot-dependency-tools
+Spring Boot Dependency Tools
+Last Release on Dec 17, 2015
+
+43. Spring Boot Dependencies6
+org.springframework.boot » spring-boot-dependencies
+Spring Boot Dependencies
+Last Release on Apr 22, 2017
+
+44. org.springframework.boot.experimental
+Group used by 6 artifacts
+
+45. Spring Boot Data Elasticsearch Starter5
+org.springframework.boot » spring-boot-starter-data-elasticsearch
+Starter for using Elasticsearch search and analytics engine and Spring Data Elasticsearch
+Last Release on Apr 22, 2017
+
+46. Spring Boot Maven Plugin5
+org.springframework.boot » spring-boot-maven-plugin
+Spring Boot Maven Plugin
+Last Release on Apr 22, 2017
+
+47. Spring Boot Gradle Plugin4
+org.springframework.boot » spring-boot-gradle-plugin
+Spring Boot Gradle Plugin
+Last Release on Apr 22, 2017
+
+48. Spring Boot Mobile Starter4
+org.springframework.boot » spring-boot-starter-mobile
+Starter for building web applications using Spring Mobile
+Last Release on Apr 22, 2017
+
+49. Spring Boot Social LinkedIn Starter3
+org.springframework.boot » spring-boot-starter-social-linkedin
+Stater for using Spring Social LinkedIn
+Last Release on Apr 22, 2017
+
+50. Spring Boot Auto Configure Annotation Processor3
+org.springframework.boot » spring-boot-autoconfigure-processor
+Spring Auto-Configure Annotation Processor
+Last Release on Apr 22, 2017
+
+51. Spring Boot Starter Ws (DEPRECATED)3
+org.springframework.boot » spring-boot-starter-ws
+Starter for using Spring Web Services. Deprecated as of 1.4 in favor of spring-boot-starter-web-services
+Last Release on Apr 21, 2017
+
+52. Spring Boot Starter Parent3
+org.springframework.boot » spring-boot-starter-parent
+Parent pom providing dependency and plugin management for applications built with Maven
+Last Release on Apr 22, 2017
+
+53. Spring Boot Data Couchbase Starter3
+org.springframework.boot » spring-boot-starter-data-couchbase
+Starter for using Couchbase document-oriented database and Spring Data Couchbase
+Last Release on Apr 22, 2017
+
+54. Spring Boot Starter Hornetq (DEPRECATED)2
+org.springframework.boot » spring-boot-starter-hornetq
+Starter for JMS messaging using HornetQ. Deprecated as of 1.4 in favor of spring-boot-starter-artemis
+Last Release on Apr 21, 2017
+
+55. Spring Boot Starter Shell Remote2
+org.springframework.boot » spring-boot-starter-shell-remote
+Spring Boot Starter Shell Remote
+Last Release on May 18, 2015
+
+56. Spring Boot Data Solr Starter2
+org.springframework.boot » spring-boot-starter-data-solr
+Starter for using the  Solr search platform with Spring Data Solr
+Last Release on Apr 22, 2017
+
+57. Spring Boot Social Twitter Starter2
+org.springframework.boot » spring-boot-starter-social-twitter
+Starter for using Spring Social Twitter
+Last Release on Apr 22, 2017
+
+58. Spring Boot Groovy Templates Starter2
+org.springframework.boot » spring-boot-starter-groovy-templates
+Starter for building MVC web applications using Groovy Templates views
+Last Release on Apr 22, 2017
+
+59. Spring Boot Social Facebook Starter2
+org.springframework.boot » spring-boot-starter-social-facebook
+Starter for using Spring Social Facebook
+Last Release on Apr 22, 2017
+
+60. Spring Boot Configuration Metadata2
+org.springframework.boot » spring-boot-configuration-metadata
+Spring Boot Configuration Metadata
+Last Release on Apr 22, 2017
+
+61. Spring Boot Data Cassandra Starter1
+org.springframework.boot » spring-boot-starter-data-cassandra
+Starter for using Cassandra distributed database and Spring Data Cassandra
+Last Release on Apr 22, 2017
+
+62. Spring Boot Mustache Starter1
+org.springframework.boot » spring-boot-starter-mustache
+Starter for building MVC web applications using Mustache views
+Last Release on Apr 22, 2017
+
+63. Spring Boot Actuator Docs1
+org.springframework.boot » spring-boot-actuator-docs
+Spring Boot Actuator Docs
+Last Release on Apr 22, 2017
+
+64. Spring Boot Velocity Starter1
+org.springframework.boot » spring-boot-starter-velocity
+Starter for building MVC web applications using Velocity views. Deprecated since 1.4
+Last Release on Apr 21, 2017
+
+65. Spring Boot Atomikos JTA Starter1
+org.springframework.boot » spring-boot-starter-jta-atomikos
+Starter for JTA transactions using Atomikos
+Last Release on Apr 22, 2017
+
+66. Spring Boot Data GemFire Starter1
+org.springframework.boot » spring-boot-starter-data-gemfire
+Starter for using GemFire distributed data store and Spring Data GemFire
+Last Release on Apr 22, 2017
+
+67. Spring Boot Bitronix JTA Starter1
+org.springframework.boot » spring-boot-starter-jta-bitronix
+Starter for JTA transactions using Bitronix
+Last Release on Apr 22, 2017
+
+68. Spring Boot Sample Tomcat Multi Connectors
+org.springframework.boot » spring-boot-sample-tomcat-multi-connectors
+Spring Boot Sample Tomcat Multi Connectors
+Last Release on May 18, 2015
+
+69. Spring Boot Sample Data Rest Archetype
+org.springframework.boot » spring-boot-sample-data-rest-archetype
+Spring Boot Data REST Sample
+Last Release on May 19, 2015
+
+
+
+70. Spring Boot Sample Aop Archetype
+org.springframework.boot » spring-boot-sample-aop-archetype
+Spring Boot AOP Sample
+Last Release on May 19, 2015
+
+71. Spring Boot Sample Batch Archetype
+org.springframework.boot » spring-boot-sample-batch-archetype
+Spring Boot Batch Sample
+Last Release on May 19, 2015
+
+72. Spring Boot Security Tests Web Hello World
+org.springframework.boot » spring-boot-security-test-web-helloworld
+Spring Boot Security Tests - Web Hello World
+Last Release on Apr 22, 2017
+
+73. Spring Boot Sample Web Jsp
+org.springframework.boot » spring-boot-sample-web-jsp
+Spring Boot Sample Web Jsp
+Last Release on May 18, 2015
+
+74. Spring Boot Build
+org.springframework.boot » spring-boot-build
+Spring Boot Build
+Last Release on Apr 22, 2017
+
+75. Spring Boot Sample Simple Archetype
+org.springframework.boot » spring-boot-sample-simple-archetype
+Spring Boot Simple Sample
+Last Release on May 19, 2015
+
+76. Spring Boot Log4J Starter
+org.springframework.boot » spring-boot-starter-Log4j
+Spring Boot Log4J Starter
+Last Release on Nov 4, 2016
+
+77. Spring Boot Archetypes
+org.springframework.boot » spring-boot-archetypes
+Spring Boot Archetypes
+Last Release on May 19, 2015
+
+78. Spring Boot Sample Data Rest
+org.springframework.boot » spring-boot-sample-data-rest
+Spring Boot Sample Data Rest
+Last Release on May 18, 2015
+
+79. Spring Boot Sample Web Jsp Archetype
+org.springframework.boot » spring-boot-sample-web-jsp-archetype
+Spring Boot Web JSP Sample
+Last Release on May 19, 2015
+
+80. Spring Boot Sample Data Jpa
+org.springframework.boot » spring-boot-sample-data-jpa
+Spring Boot Sample Data Jpa
+Last Release on May 18, 2015
+
+81. Spring Boot Sample Actuator
+org.springframework.boot » spring-boot-sample-actuator
+Spring Boot Sample Actuator
+Last Release on May 18, 2015
+
+82. Spring Boot Tools
+org.springframework.boot » spring-boot-tools
+Spring Boot Tools
+Last Release on Apr 22, 2017
+
+83. Spring Boot Sample Integration
+org.springframework.boot » spring-boot-sample-integration
+Spring Boot Sample Integration
+Last Release on May 18, 2015
+
+84. Spring Boot Sample Amqp
+org.springframework.boot » spring-boot-sample-amqp
+Spring Boot Sample Amqp
+Last Release on May 18, 2015
+
+85. Spring Boot Antlib
+org.springframework.boot » spring-boot-antlib
+Spring Boot Antlib
+Last Release on Apr 22, 2017
+
+86. Spring Boot Sample Websocket
+org.springframework.boot » spring-boot-sample-websocket
+Spring Boot Sample Websocket
+Last Release on May 18, 2015
+
+87. Spring Boot Tomcat Deployment Test
+org.springframework.boot » spring-boot-deployment-test-tomcat
+Spring Boot Tomcat Deployment Test
+Last Release on Apr 22, 2017
+
+88. Spring Boot Sample Actuator Log4j
+org.springframework.boot » spring-boot-sample-actuator-log4j
+Spring Boot Sample Actuator Log4j
+Last Release on May 18, 2015
+
+89. Spring Boot Sample Xml
+org.springframework.boot » spring-boot-sample-xml
+Spring Boot Sample Xml
+Last Release on May 18, 2015
+
+
+
+90. Spring Boot Sample Data Mongodb
+org.springframework.boot » spring-boot-sample-data-mongodb
+Spring Boot Sample Data Mongodb
+Last Release on May 18, 2015
+
+91. Spring Boot Integration Tests
+org.springframework.boot » spring-boot-integration-tests
+Spring Boot Integration Tests
+Last Release on May 18, 2015
+
+92. Spring Boot WildFly Deployment Test
+org.springframework.boot » spring-boot-deployment-test-wildfly
+Spring Boot WildFly Deployment Test
+Last Release on Apr 22, 2017
+
+93. Spring Boot Web Services Starter
+org.springframework.boot » spring-boot-starter-web-services
+Starter for using Spring Web Services
+Last Release on Apr 22, 2017
+
+94. Spring Boot FreeMarker Starter
+org.springframework.boot » spring-boot-starter-freeMarker
+Spring Boot FreeMarker Starter
+Last Release on Nov 4, 2016
+
+95. Spring Boot Jersey Parent
+org.springframework.boot » spring-boot-jersey-parent
+Spring Boot Jersey Parent
+Last Release on May 19, 2015
+
+96. Spring Boot Narayana JTA Starter
+org.springframework.boot » spring-boot-starter-jta-narayana
+Spring Boot Narayana JTA Starter
+Last Release on Apr 22, 2017
+
+97. Spring Boot TomEE Deployment Test
+org.springframework.boot » spring-boot-deployment-test-tomee
+Spring Boot TomEE Deployment Test
+Last Release on Apr 22, 2017
+
+98. Spring Boot Sample Websocket Archetype
+org.springframework.boot » spring-boot-sample-websocket-archetype
+Spring Boot WebSocket Sample
+Last Release on May 19, 2015
+
+99. Spring Boot Data LDAP Starter
+org.springframework.boot » spring-boot-starter-data-ldap
+Starter for using Spring Data LDAP
+Last Release on Apr 22, 2017
+
+100. Spring Boot Sample Flyway Archetype
+org.springframework.boot » spring-boot-sample-flyway-archetype
+Spring Boot Flyway Sample
+Last Release on May 19, 2015
+
+
+101. Spring Boot Data Neo4j Starter
+org.springframework.boot » spring-boot-starter-data-neo4j
+Starter for using Neo4j graph database and Spring Data Neo4j
+Last Release on Apr 22, 2017
+
+102. Spring Boot Sample Actuator Noweb Archetype
+org.springframework.boot » spring-boot-sample-actuator-noweb-archetype
+Spring Boot Actuator Non-Web Sample
+Last Release on May 19, 2015
+
+103. Spring Boot Sample Web Freemarker Archetype
+org.springframework.boot » spring-boot-sample-web-freemarker-archetype
+Spring Boot Web FreeMarker Sample
+Last Release on May 19, 2015
+
+104. Spring Boot Deployment Tests
+org.springframework.boot » spring-boot-deployment-tests
+Spring Boot Deployment Tests
+Last Release on Apr 22, 2017
+
+105. Spring Boot Jersey
+org.springframework.boot » spring-boot-jersey
+Jersey autoconfig project
+Last Release on May 18, 2015
+
+106. Spring Boot Security Tests Web Hello World
+org.springframework.boot » spring-boot-security-tests-web-helloworld
+Spring Boot Security Tests - Web Hello World
+Last Release on Sep 9, 2015
+
+107. Spring Boot Security Tests
+org.springframework.boot » spring-boot-security-tests
+Spring Boot Security Tests
+Last Release on Apr 22, 2017
+
+108. Spring Boot Sample Jetty
+org.springframework.boot » spring-boot-sample-jetty
+Spring Boot Sample Jetty
+Last Release on May 18, 2015
+
+109. Spring Boot Gradle Integration Tests
+org.springframework.boot » spring-boot-gradle-tests
+Spring Boot Gradle Integration Tests
+Last Release on Apr 22, 2017
+
+
+
+110. Spring Boot Full Build
+org.springframework.boot » spring-boot-full-build
+Spring Boot Full Build
+Last Release on Apr 22, 2017
+
+111. Spring Boot Sample Secure Archetype
+org.springframework.boot » spring-boot-sample-secure-archetype
+Spring Boot Security Sample
+Last Release on May 19, 2015
+
+112. Spring Boot Javadoc
+org.springframework.boot » spring-boot-javadoc
+Spring Boot Javadoc
+Last Release on May 18, 2015
+
+113. Spring Boot Sample Integration Archetype
+org.springframework.boot » spring-boot-sample-integration-archetype
+Spring Boot Integration Sample
+Last Release on May 19, 2015
+
+114. Spring Boot ActiveMQ Starter
+org.springframework.boot » spring-boot-starter-activemq
+Starter for JMS messaging using  ActiveMQ
+Last Release on Apr 22, 2017
+
+115. Spring Boot Sample Data Elasticsearch Archetype
+org.springframework.boot » spring-boot-sample-data-elasticsearch-archetype
+Spring Boot Data Elasticsearch Sample
+Last Release on May 19, 2015
+
+116. Spring Boot Sample Traditional
+org.springframework.boot » spring-boot-sample-traditional
+Spring Boot Sample Traditional
+Last Release on May 18, 2015
+
+117. Spring Boot Artemis Starter
+org.springframework.boot » spring-boot-starter-artemis
+Starter for JMS messaging using  Artemis
+Last Release on Apr 22, 2017
+
+118. Spring Boot Sample Actuator Ui
+org.springframework.boot » spring-boot-sample-actuator-ui
+Spring Boot Sample Actuator Ui
+Last Release on May 18, 2015
+
+119. Spring Boot Sample Liquibase Archetype
+org.springframework.boot » spring-boot-sample-liquibase-archetype
+Spring Boot Liquibase Sample
+Last Release on May 19, 2015
+
+120. Spring Boot Sample Actuator Ui Archetype
+org.springframework.boot » spring-boot-sample-actuator-ui-archetype
+Spring Boot Actuator UI Sample
+Last Release on May 19, 2015
+
+121. Spring Boot Legacy
+org.springframework.boot » spring-boot-legacy
+Spring Boot Servlet 2.5 support
+Last Release on Nov 17, 2016
+
+122. Spring Boot Sample Web Groovy Templates Archetype
+org.springframework.boot » spring-boot-sample-web-groovy-templates-archetype
+Spring Boot Web UI Sample
+Last Release on May 19, 2015
+
+123. Spring Boot Cloud Multiplatform Starter
+org.springframework.boot » spring-boot-starter-cloud
+Spring Boot Starter for Spring Cloud
+Last Release on May 18, 2015
+
+124. Spring Boot JOOQ Starter
+org.springframework.boot » spring-boot-starter-jooq
+Starter for using jOOQ to access SQL databases. An alternative to spring-boot-starter-data-jpa or spring-boot-starter-jdbc
+Last Release on Apr 22, 2017
+
+125. Spring Boot Sample Hornetq Archetype
+org.springframework.boot » spring-boot-sample-hornetq-archetype
+Spring Boot HornetQ Sample
+Last Release on May 19, 2015
+
+126. Spring Boot Sample Batch
+org.springframework.boot » spring-boot-sample-batch
+Spring Boot Sample Batch
+Last Release on May 18, 2015
+
+127. Spring Boot Versions
+org.springframework.boot » spring-boot-versions
+Spring Boot Versions Property File
+Last Release on Dec 17, 2015
+
+128. Spring Boot Sample Traditional Archetype
+org.springframework.boot » spring-boot-sample-traditional-archetype
+Spring Boot Traditional Sample
+Last Release on May 19, 2015
+
+129. Spring Boot Sample Data Solr Archetype
+org.springframework.boot » spring-boot-sample-data-solr-archetype
+Spring Boot Data Solr Sample
+Last Release on May 19, 2015
+
+
+
+130. Spring Boot Sample Parent Context Archetype
+org.springframework.boot » spring-boot-sample-parent-context-archetype
+Spring Boot Integration Sample
+Last Release on May 19, 2015
+
+131. Spring Boot Sample Ws Archetype
+org.springframework.boot » spring-boot-sample-ws-archetype
+Spring Boot Web Services Sample
+Last Release on May 19, 2015
+
+132. Spring Boot Sample Aop
+org.springframework.boot » spring-boot-sample-aop
+Spring Boot Sample Aop
+Last Release on May 18, 2015
+
+133. Spring Boot Sample Data Redis
+org.springframework.boot » spring-boot-sample-data-redis
+Spring Boot Sample Data Redis
+Last Release on May 18, 2015
+
+134. Spring Boot Glassfish Deployment Test
+org.springframework.boot » spring-boot-deployment-test-glassfish
+Spring Boot Glassfish Deployment Test
+Last Release on Apr 22, 2017
+
+135. Spring Boot Sample Web Method Security
+org.springframework.boot » spring-boot-sample-web-method-security
+Spring Boot Sample Web Method Security
+Last Release on May 18, 2015
+
+136. Spring Boot WebSphere Liberty Profile Deployment Test
+org.springframework.boot » spring-boot-deployment-test-wlp
+Spring Boot WebSphere Liberty Profile Deployment Test
+Last Release on Apr 22, 2017
+
+137. Spring Boot Sample Web Ui Archetype
+org.springframework.boot » spring-boot-sample-web-ui-archetype
+Spring Boot Web UI Sample
+Last Release on May 19, 2015
+
+138. Spring Boot Sample Actuator Archetype
+org.springframework.boot » spring-boot-sample-actuator-archetype
+Spring Boot Actuator Sample
+Last Release on May 19, 2015
+
+139. Spring Boot Sample Web Secure
+org.springframework.boot » spring-boot-sample-web-secure
+Spring Boot Sample Web Secure
+Last Release on May 18, 2015
+
+140. Spring Boot Sample Profile Archetype
+org.springframework.boot » spring-boot-sample-profile-archetype
+Spring Boot Profile Sample
+Last Release on May 19, 2015
+
+
+141. Spring Boot Parent
+org.springframework.boot » spring-boot-parent
+Spring Boot Parent
+Last Release on Apr 22, 2017
+
+142. Spring Boot Sample Simple
+org.springframework.boot » spring-boot-sample-simple
+Spring Boot Sample Simple
+Last Release on May 18, 2015
+
+143. Spring Boot Docs
+org.springframework.boot » spring-boot-docs
+Spring Boot Docs
+Last Release on Apr 22, 2017
+
+144. Spring Boot Sample Web Secure Archetype
+org.springframework.boot » spring-boot-sample-web-secure-archetype
+Spring Boot Web Secure Sample
+Last Release on May 19, 2015
+
+145. Spring Boot Sample Amqp Archetype
+org.springframework.boot » spring-boot-sample-amqp-archetype
+Spring Boot AMQP Sample
+Last Release on May 19, 2015
+
+146. Spring Boot Launch Script Integration Tests
+org.springframework.boot » spring-boot-launch-script-tests
+Spring Boot Launch Script Integration Tests
+Last Release on Apr 22, 2017
+
+147. Spring Boot Samples
+org.springframework.boot » spring-boot-samples
+Spring Boot Samples
+Last Release on May 18, 2015
+
+148. Spring Boot Sample Data Jpa Archetype
+org.springframework.boot » spring-boot-sample-data-jpa-archetype
+Spring Boot Data JPA Sample
+Last Release on May 19, 2015
+
+149. Spring Boot Sample Tomcat Archetype
+org.springframework.boot » spring-boot-sample-tomcat-archetype
+Spring Boot Tomcat Sample
+Last Release on May 19, 2015
+
+
+
+150. Spring Boot Sample Servlet
+org.springframework.boot » spring-boot-sample-servlet
+Spring Boot Sample Servlet
+Last Release on May 18, 2015
+
+151. Spring Boot Sample Web Static Archetype
+org.springframework.boot » spring-boot-sample-web-static-archetype
+Spring Boot Web Static Sample
+Last Release on May 19, 2015
+
+152. Spring Boot Sample Tomcat
+org.springframework.boot » spring-boot-sample-tomcat
+Spring Boot Sample Tomcat
+Last Release on May 18, 2015
+
+153. Spring Boot Sample Data Mongodb Archetype
+org.springframework.boot » spring-boot-sample-data-mongodb-archetype
+Spring Boot Data MongoDB Sample
+Last Release on May 19, 2015
+
+154. Spring Boot Sample Tomcat8 Jsp Archetype
+org.springframework.boot » spring-boot-sample-tomcat8-jsp-archetype
+Spring Boot Tomcat 8 JSP Sample
+Last Release on May 19, 2015
+
+155. Spring Boot Sample Web Velocity Archetype
+org.springframework.boot » spring-boot-sample-web-velocity-archetype
+Spring Boot Web Velocity Sample
+Last Release on May 19, 2015
+
+156. Spring Boot Sample Xml Archetype
+org.springframework.boot » spring-boot-sample-xml-archetype
+Spring Boot XML Sample
+Last Release on May 19, 2015
+
+157. Spring Boot FreeMarker Starter
+org.springframework.boot » spring-boot-starter-FreeMarker
+Spring Boot FreeMarker Starter
+Last Release on Nov 4, 2016
+
+158. Spring Boot Sample Actuator Noweb
+org.springframework.boot » spring-boot-sample-actuator-noweb
+Spring Boot Sample Actuator Noweb
+Last Release on May 18, 2015
+
+159. Spring Boot Sample Web Ui
+org.springframework.boot » spring-boot-sample-web-ui
+Spring Boot Sample Web Ui
+Last Release on May 18, 2015
+
+160. Spring Boot DevTools Tests
+org.springframework.boot » spring-boot-devtools-tests
+Spring Boot DevTools Tests
+Last Release on Apr 22, 2017
+
+161. Spring Boot Sample Web Static
+org.springframework.boot » spring-boot-sample-web-static
+Spring Boot Sample Web Static
+Last Release on May 18, 2015
+
+162. Spring Boot Sample Servlet Archetype
+org.springframework.boot » spring-boot-sample-servlet-archetype
+Spring Boot Servlet Sample
+Last Release on May 19, 2015
+
+163. Spring Boot Sample Secure
+org.springframework.boot » spring-boot-sample-secure
+Spring Boot Sample Secure
+Last Release on May 18, 2015
+
+164. Spring Boot Sample Profile
+org.springframework.boot » spring-boot-sample-profile
+Spring Boot Sample Profile
+Last Release on May 18, 2015
+
+165. Spring Boot Sample Web Method Security Archetype
+org.springframework.boot » spring-boot-sample-web-method-security-archetype
+Spring Boot Web Method Security Sample
+Last Release on May 19, 2015
+
+166. Spring Boot Sample Data Redis Archetype
+org.springframework.boot » spring-boot-sample-data-redis-archetype
+Spring Boot Data Redis Sample
+Last Release on May 19, 2015
+
+167. Spring Boot Starters
+org.springframework.boot » spring-boot-starters
+Spring Boot Starters
+Last Release on Apr 22, 2017
+
+168. Spring Boot Sample Actuator Log4j Archetype
+org.springframework.boot » spring-boot-sample-actuator-log4j-archetype
+Spring Boot Actuator Log4J Sample
+Last Release on May 19, 2015
+
+169. Spring Boot Sample Jetty Archetype
+org.springframework.boot » spring-boot-sample-jetty-archetype
+Spring Boot Jetty Sample
+Last Release on May 19, 2015
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

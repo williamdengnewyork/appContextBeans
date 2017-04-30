@@ -1,5 +1,8 @@
 package com.spring.example.appContextBeans;
 
+import java.util.Arrays;
+
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
@@ -9,7 +12,15 @@ public class App
     {
         System.out.println( "Spring Beans in Application Context..." );
         String[] paths = { "classpath:**/beanRefContext.xml" };
-        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext(paths);
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext(paths);
+        
+
+        
+        System.out.println( "SgetBeanDefinitionNames()..." );
+        System.out.println(Arrays.asList(applicationContext.getBeanDefinitionNames()));
+        
+        
+        
     }
 }
 
