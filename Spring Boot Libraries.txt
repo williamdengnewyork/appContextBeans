@@ -1,4 +1,4 @@
->> Spring Boot Libraries
+﻿>> Spring Boot Libraries
 
 -- Diff b/w spring-boot-starter-* (POM) artifact vs spring-boot-*  no-started artifacts
 
@@ -40,6 +40,26 @@ Top level Spring boot starter parent:
 
 -- List of 170  --    https://mvnrepository.com/artifact/org.springframework.boot
 
+Those POMs can be used to synthesize the dependencies that can be used for a certain kind of project, 
+e.g. for a simple Spring MVC project, the following artifacts are to be included (Read from spring-boot-starter, spring-boot-starter-web, spring-boot-starter-security respectively)
+
+> Spring Boot artifacts:
+org.springframework.boot:spring-boot
+org.springframework.boot:spring-boot-autoconfigure
+org.springframework.boot:spring-boot-starter-logging
+
+> Spring Core, Web, MVC, Security artifacts:
+org.springframework:spring-core
+org.springframework:spring-web
+org.springframework:spring-webmvc
+org.springframework:spring-beans
+org.springframework:spring-context
+org.springframework:spring-expression
+org.springframework:spring-aop
+org.springframework.security:spring-security-config
+org.springframework.security:spring-security-web
+org.hibernate:hibernate-validator
+com.fasterxml.jackson.core:jackson-databind
 
 
 1. Spring Boot Test Starter
